@@ -1,0 +1,14 @@
+:root {
+  --primary: #1A73E8;
+  --text: #222222;
+  --bg: #FFFFFF;
+  --radius: 12px;
+
+  --font-main: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg);
+}
