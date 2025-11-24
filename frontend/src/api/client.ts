@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'VITE_API_URL=https://e-commerce-30ev.onrender.com';
+const API_BASE_URL = 'https://e-commerce-30ev.onrender.com';
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
