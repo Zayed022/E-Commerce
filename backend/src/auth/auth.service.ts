@@ -21,13 +21,14 @@ export class AuthService {
   }
 
   async requestOtp(email: string): Promise<void> {
-    const code = this.generateOtp();
-    const expiresAt = new Date(Date.now() + 5 * 60 * 1000); // 5 mins
-    const otp = this.otpRepo.create({ email, code, expiresAt });
-    await this.otpRepo.save(otp);
+  const code = this.generateOtp();
+  const expiresAt = new Date(Date.now() + 5 * 60 * 1000); // 5 mins
+  const otp = this.otpRepo.create({ email, code, expiresAt });
+  await this.otpRepo.save(otp);
 
-    await this.emailService.sendOtpEmail(email, code);
-  }
+  await this.emailService.sendOtp(email, code);
+}
+
 
   async verifyOtp(email: string, code: string) {
     const otp = await this.otpRepo.findOne({
