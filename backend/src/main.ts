@@ -7,7 +7,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
     "http://localhost:5173",
-    "https://e-commerce-rho-two-66.vercel.app/",
+    "https://e-commerce-rho-two-66.vercel.app",
   ],
     credentials: true,
   });
